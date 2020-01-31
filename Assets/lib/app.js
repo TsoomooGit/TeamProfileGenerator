@@ -1,6 +1,8 @@
 const fs = require("fs");
 const inquirer = require('inquirer');
 const promt = require('prompt-async');
+const chalk = require('chalk');
+
 const Manager= require("./manager");
 const Engineer = require("./Engineer");
 const Intern = require("./Intern");
@@ -16,7 +18,7 @@ function getPromt(){
         type: 'list',
         name: 'role',
         message: 'Employee role?',
-        choices: ['Manager', 'Engineer','Intern','Done'],
+       choices: ['Manager', 'Engineer','Intern','Done'],
       }
      ])
      
@@ -68,11 +70,11 @@ function getPromt(){
                      holder+=arr[i];
                  }
                 html=getHtml(holder);
-                fs.writeFile("/Users/tsolmon/Documents/bootcamp2019/homework#8 /Assets/output/result.html", html, function(err){
+                fs.writeFile("../output/result.html", html, function(err){
         if(err){
             throw err;
         }
-        console.log(`Saved profile html file.`);
+        console.log(chalk.green(`Saved profile html file.`));
      
     })
 
