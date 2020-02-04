@@ -6,7 +6,7 @@ describe("Employee", () => {
         const employee1 = new Employee("Kimmie",1,"KimmieManager@gmail.com");
   
         expect(employee1.getName()).toEqual("Kimmie");
-        expect(employee1.getId()).toEqual(1);
+        expect(employee1.getId()).toEqual("1");
         expect(employee1.getEmail()).toEqual("KimmieManager@gmail.com");
        
       });

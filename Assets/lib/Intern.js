@@ -7,6 +7,7 @@ constructor(name, id, email,school){
     }
 super(name, id, email,);
 super.setRole("Intern");
+this.school=school;
 }
 setSchool(school){
     this.school=school;

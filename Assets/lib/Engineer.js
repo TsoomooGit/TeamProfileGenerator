@@ -6,12 +6,13 @@ constructor(name, id, email,githubUsername){
     }
     super(name, id, email,);
     super.setRole("Engineer");
+    this.githubUsername=githubUsername;
 }
-setGitHubUserName(username){
-    this.username=username;
+setGitHubUserName(githubUsername){
+    this.githubUsername=githubUsername;
 }
 getGitHubUsername(){
-    return  `${this.username}`;
+    return  `${this.githubUsername}`;
 }
 }
 
